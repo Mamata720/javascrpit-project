@@ -1,0 +1,712 @@
+{
+    "course": {
+        "id": "150",
+        "name": "JS Objects",
+        "logo": "http://navgurukul.org/img/sqlogo.jpg",
+        "notes": null,
+        "days_to_complete": null,
+        "short_description": "We will discuss about the operations can be done on objects in javascript.",
+        "type": "js",
+        "lang_available": [
+            "en"
+        ],
+        "exercises": [
+            {
+                "id": "3635",
+                "parent_exercise_id": null,
+                "course_id": "150",
+                "name": "Objects",
+                "slug": "js-objects__Introduction",
+                "sequence_num": 0,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Introduction.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Think of a dictionary. \n\n\n\nIt has people’s names and their phone numbers. If we have to store this type of data, i.e. people’s names and phone numbers, then we will use something called the Object data type.\n\n\n\n\nThe following example will show you the simplest way to create an object in JavaScript. you access the data in objects through what are called properties or `keys`.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "\nvar emptyObject = {};\nvar myContacts= {\"kumar\": 9000000000, \"shwetha\": 9876543211, \"komal\": \"0909990999\"};\n// For better reading\nvar campusCityState = {\n   \"Sarjapur\": \"Karnataka\",\n   \"Pune\": \"Maharashtra\",\n   \"Dharmashala\": \"Himachal Pradesh\"\n}\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "var myDetails={\"name\":\"kumar\",\"surname\":\"nayak\",\"age\":24}",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": " \nAn object contains properties, defined as a `key`-value pair. \n\n\n\nIn the example above, name, surname and age are `keys`, and Nayak, Kumar and 24 and their corresponding values.\n\n\n\nThe object is a complex data type that allows you to store collections of data.\n\n\n\nYou can omit the quotes around `key` names like shown in the example below.\n\n\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "var myDetails= {\n   name:\"kumar\",\n   surname:\"nayak\",\n   age:24\n}",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "But, be aware that the following example will throw an `error`.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "var myDetails= {\n   first-name:\"kumar\",\n   surname:\"nayak\",\n   age:24\n}",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "To make the above to work, we will have to put quotes and quotes are required around first-name.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "var myDetails= {\n   \"first-name\":\"kumar\",\n   surname:\"nayak\",\n   age:24\n}",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "If the `key` value is one word, like name, or like firstName, that will work. But if it contains any dashes or spaces (like “first-name” or “first name”) then you have to put the inside quotes.\n\n\n\n\n### You can also use numbers as properties. \n\n\n\nSee the below example.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "var students ={\n   1:\"shwetha\",\n   2:\"kumar\",\n   3:\"komal\"\n}",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3637",
+                "parent_exercise_id": null,
+                "course_id": "150",
+                "name": "Accessing Object Properties",
+                "slug": "js-objects__Accessing-Object-Properties",
+                "sequence_num": 100,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Accessing-Object-Properties.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "In two ways we can access properties of object i.e.,** dot notation (.)** and **bracket notation ([ ])**, similar to an array. \n\n\n\n\nHere is a sample of using dot notation (.) to read an object's property:\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "\nvar vegetables ={\n   veg1:\"potato\",\n   veg2:\"brinjal\",\n   veg3:\"bottle gourd\"\n}\n \nvar vegetable1= vegetables.veg1;\nvar vegetable2= vegetables.veg2;\nvar vegetable3= vegetables.veg3;\n\n\nconsole.log(vegetable1);\nconsole.log(vegetable2);\nconsole.log(vegetable3);\n \n//output:\n// potato\n// brinjal\n// bottle gourd\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "### Explanation:\n\n\n\nvege`tab`les.veg1 would have the value of potato, vege`tab`les.veg2 would have the value of brinjal, vege`tab`les.veg3 would have the value of bottle gourd.\n\n\n\n\nThe second way to access the properties of an object is bracket notation ([ ]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.\n\n\n\n\nHowever, you can still use bracket notation on object properties has without spaces.\n\n\n\n\nHere is a sample of using bracket notation to read an object's property:\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "var myDetails={\n   \"first name\":\"kumar\",\n   \"last name\": \"vadthya\",\n   \"middle name\":\"nayak\"\n}\n \nconsole.log(myDetails[\"first name\"]);\nconsole.log(myDetails[\"last name\"]);\nconsole.log(myDetails[\"middle name\"]);\n \n// output\n// kumar\n// vadthya\n// nayak\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "### Explanation:\n\n\n\nmyDetails[\"first name\"] would be the `string` \"kumar\", myDetails[\"last name\"] would be the `string` \"vadthya\", myDetails[\"middle name\"] would be the `string` \"nayak\".\n\n"
+                    }
+                ]
+            },
+            {
+                "id": "3644",
+                "parent_exercise_id": null,
+                "course_id": "150",
+                "name": "Updating a property",
+                "slug": "js-objects__Updating-a-property",
+                "sequence_num": 200,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Updating-a-property.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "### For example, \n\n\n\nlet's look at myHome:\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "\nvar myHome = {\n   \"name\": \"Mannat\",\n   \"location\":\"Mumbai\",\n   \"Colour\":\"black\",\n   \"owner\":\"sharukh khan\",\n   \"neighbours\": [\"everything!\"]\n };\n \n \nmyHome.name=\"my Villa\";\n \nconsole.log(myHome);\n \n//  output\n\n// {\n//    name: ‘my Villa’,\n//    location:\"Mumbai\",\n//    Colour:\"black\",\n//    Owner:”sharukh khan”,\n//    neighbours: [\"everything!\"]\n// }\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "let's change object's property name to the `string` my Villa. \n\n\n\nHere's how we update his object's name property: \n\n\n\nmyHome.name = \"my Villa\"; \n\n\n\nor \n\n\n\nmyHome[\"name\"] = \"my Villa\"; \n\n\n\nNow when we evaluate myHome.name, instead of getting Mannat, we'll get his new name, myVilla.\n\n\n\n\nAfter you've created a JavaScript object, you can update its properties at any time just like you would update any other `variable`. You can use either dot or bracket notation to update.\n\n"
+                    }
+                ]
+            },
+            {
+                "id": "3636",
+                "parent_exercise_id": null,
+                "course_id": "150",
+                "name": "Adding new property",
+                "slug": "js-objects__Add-new-properties-to-an-object",
+                "sequence_num": 300,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Add-new-properties-to-an-object.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Here's how we would add a isGood property to myHome:\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "\nvar myHome = {\n   \"name\": \"Mannat\",\n   \"location\":\"Mumbai\",\n   \"Colour\":\"black\",\n   \"owner\":\"sharukh khan\",\n   \"neighbours\": [\"everything!\"]\n };\n\n\nmyHome.isGood= true;\n\nconsole.log(myHome);\n\n// output\n\n// {\n//    name: ‘my Villa’,\n//    location:\"Mumbai\",\n//    Colour:\"black\",\n//    Owner:”sharukh khan”,\n//    neighbours: [\"everything!\"],\n//    isGood:true\n// }\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "If you see, the new property isGood is added in the object.\n\n\n\nFor adding:\n\n\n\nobjectName.NewPropertyName = value;\n\n\n\nmyHome.isGood= `true`;\n\n\n\nThen in myHome object we are going to set a new property named isGood and we are giving value as `true`.\n\n"
+                    }
+                ]
+            },
+            {
+                "id": "3638",
+                "parent_exercise_id": null,
+                "course_id": "150",
+                "name": "Deleting properties",
+                "slug": "js-objects__Deleting-properties-from-an-object",
+                "sequence_num": 400,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Deleting-properties-from-an-object.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "\nvar myHome = {\n   \"name\": \"Mannat\",\n   \"location\":\"Mumbai\",\n   \"Colour\":\"black\",\n   \"owner\":\"sharukh khan\",\n   \"neighbours\": [\"everything!\"],\n   \"isGood\":true\n };\n \n delete myHome.isGood;\n console.log(myHome)\n\n\n//output\n// {\n//   name: 'Mannat',\n//   location: 'Mumbai',\n//   Colour: 'black',\n//   owner: 'sharukh khan',\n//   neighbours: [ 'everything!' ]\n// }\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "isGood property is deleted from an object myHome.\n\n\n\nFor deleting a particular property:\n\n\n\ndelete objectName.PropertyName;\n\n\n\ndelete myHome.isGood;\n\n\n\nThen in myHome object we are going to delete a property named isGood and we are deleting isGood property.\n\n"
+                    }
+                ]
+            },
+            {
+                "id": "3639",
+                "parent_exercise_id": null,
+                "course_id": "150",
+                "name": "Check property is there or not",
+                "slug": "js-objects__Check-property-is-there-or-not",
+                "sequence_num": 500,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Check-property-is-there-or-not.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "You can check whether property exists or not in an object. \n\n\n\nWe can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. \n\n\n\n**.hasOwnProperty()** returns `true` or `false` if the property is found or not.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "\nvar myDetails={\n   \"name\":\"kumar\",\n   \"age\":24\n}\nconsole.log(myDetails.hasOwnProperty(\"name\"));\n// output \n// true\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "For checking property is there or not,\n\n\n\n**objectName.hasOwnProperty(PropertyName);** will gives either `true` or `false`.\n\n\n\n**myDetails.hasOwnProperty(\"name\");** this will returns `true` because property name is there object named myDetails.\n\n"
+                    }
+                ]
+            },
+            {
+                "id": "3640",
+                "parent_exercise_id": null,
+                "course_id": "150",
+                "name": "Loop over an object",
+                "slug": "js-objects__Loop-over-an-object",
+                "sequence_num": 600,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Loop-over-an-object.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "for in `loop` is a special type of `loop` that iterates over the object or an array of elements.\n\n\n \n\n### Example:\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "var cars = [\"Maruti\", \"Mercedes\", \"BMW\"];\nfor (car in cars){\nconsole.log(cars[car]),\n}\n// Output:\n// Maruti\n// Mercedes\n// BMW",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "### Explanation:\n\n\n\nBy for in when you are `loop`ing on an array, in the car each time its `key` (index number) will come like 0,1 ,2 respectively. \n\n\n\nWhen the first time `loop` is running the car value is 0, we said to print cars[car] means cars[0] so it prints Maruti because in the zeroth position of cars we have Maruthi.\n\n\n\nWhen the second time `loop` is running, the car value is 1, we said to print cars[car] means cars[1] so it print Mercedes because in the first position of cars we have Mercedes.\n\n\n\nWhen the third time `loop` is running, the car value is 2, we said to print cars[car] means cars[2] so it prints BMW because in the first position of cars we have BMW.\n\n\n\n\n### Example:\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "\nconst campus_list=[\"Bangalore\",\"Dharamshala\",\"Pune\",\"Bangalore_another\"]\nfor(let campus in campus_list){\n   console.log(campus)\n}\n\n// Output: \n// 0\n// 1\n// 2\n// 3\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "### Explanation:\n\n\n\nBy for in when you are `loop`ing  on Array, in  the campus each time its `key` (index number) will come like 0,1 ,2, 3 respectively. \n\n\n\nIn the above example, we are using an `operator` with for `loop`. For within `operators`, use to give the index of an array.\n\n\n\n### Example:\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "\nvar person={\"name\":\"gouri\",\"surname\":\"maity\",\"age\":37}\n \nfor (person_details in person){\nconsole.log(person_details+ \"= \"+person[person_details]);\n}\n\n// Output: \n// name= gouri\n// surname= maity\n// age= 37\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "### Explanation:\n\n\n\nBy for in when you are `loop`ing on Dictionary (object), in  person_details each time its `key` will come like name, surname, age respectively. \n\n\n\nWhen the first time `loop` is running the person_details value is name, we said to print person[person_details] means person[\"name\"] so it prints gouri because in person dictionary name `key` has the value of gouri.\n\n\n\nWith the `string` concatenation \n\n\n\nperson_details+ \"= \"+person[\"name\"], name= gouri\n\n\n\nWhen the second time `loop` is running, the person_details value is surname. We said to print person[person_details] means person[\"surname\"] so it prints maity because in person dictionary surname `key` has the value maity.\n\n\n\nWith the `string` concatenation \n\n\n\nperson_details+ \"= \"+person[\"surname\"],surname=maity\n\n\n\nWhen the third time `loop` is running, the person_details value is age, we said to print person[person_details] means person[\"age\"] so it prints 37 because in the person dictionary age has the value of 37.\n\n\n\nWith the `string` concatenation \n\n\n\nperson_details+ \"= \"+person[\"age\"],age= 37\n\n\n\n## Example:\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "const campus={\"camp_name\":\"Bangalore_campus\",\"establish\":2016,\"election\":\"three_months\"}\nfor(let eachKey in campus){\n  console.log(campus[pro])\n}\n// Output: \n// Bangalore_campus\n// 2016\n// three_months\n",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "By for in when you are `loop`ing on Dictionary (object), in  each`Key` each time its `key` will come like camp_name, es`tab`lish, election respectively. \n\n\n\nWhen the first time `loop` is running the each`Key` value is camp_name, we said to print campus[pro] means campus[“camp_name”] so it prints Bangalore_campus  because in the campus dictionary camp_name `key` has the value of Bangalore_campus.\n\n\n\nWhen the second time `loop` is running, the each`Key` value is es`tab`lish. We said to print  campus[pro] means campus[“es`tab`lish”] so it prints 2016 because in the campus dictionary es`tab`lish `key` has the value 2016.\n\n\n\nWhen the third time `loop` is running, the each`Key` value is election, we said to print campus[pro] means campus[“election”] so it prints three_months because in the campus dictionary election has the value of theree_months.\n\n"
+                    }
+                ]
+            },
+            {
+                "id": "3707",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-1",
+                "slug": "js-objects__Exercises/Question-1",
+                "sequence_num": 700,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-1.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Write a `Python` program to combine two dictionary adding values for common `keys`.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "d1 = {'a': 100, 'b': 200, 'c':300}\nd2 = {'a': 300, 'b': 200, 'd':400}\n// output should be this: {'a': 400, 'b': 400, 'd': 400, 'c': 300}",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3709",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-2",
+                "slug": "js-objects__Exercises/Question-2",
+                "sequence_num": 701,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-2.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Write a programme to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x).\n\n\n\nSample `input` (n = 5) :\n\n\n\n`Output` : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "var prompt = require('readline-sync');\nvar n = prompt.questionInt('How many more times? ');\nd = {}\nfor (let i = 0; i <= n; i++) {\n   d[i] = i ** 2\n}\nconsole.log(d);",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3708",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-3",
+                "slug": "js-objects__Exercises/Question-3",
+                "sequence_num": 702,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-3.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Write a program to print count a sub`string` in a Main `string`.\n\n\n\n\nvar main`String`=\"My name is kumar, and my friend’s name is Dhamu\"\nvar sub`String`=\"is\"\n\n\n\n\n`Output`:\n\n\n\nThe sub`string` is there 2 times in main `string`.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3825",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-4",
+                "slug": "js-objects__Exercises/Question-4",
+                "sequence_num": 703,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-4.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Write a program where it will combine given objects and give the result in 1 object, if it has the same properties add the values of it.\n\n\n \nExample :\n\n\n\n`Input` :\n\n\n\nvar dic1={1:10, 2:20}\n\n\n\nvar dic2={3:30,2:40}\n\n\n\nvar dic3={5:50,6:60}\n\n\n \n`Output` :\n\n\n\n{1: 10, 2: 60, 3: 30,  5: 50, 6: 60}\n\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "var dic1={1:10, 2:20};\nvar dic2={3:30,2:40};\nvar dic3={5:50,6:60};\nfor (i in dic1){\n  for (j in dic2){\n    if (i==j){\n        dic3[i]=dic1[i]+dic2[j]\n        break\n    }\n     else{\n        dic3[i]=dic1[i]\n        dic3[j]=dic2[j]\n     }\n  } \n}\nconsole.log(dic3);",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3828",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-5",
+                "slug": "js-objects__Exercises/Question-5",
+                "sequence_num": 704,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-5.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Write a program to take 1 `input` and check whether given `input` exists in our object or not, if it exists print exists or else prints not exist.\n\n\n\nExample :\n\n\n\ndict={“name”:”Raju”, “marks”:56}\n\n\n \nif `input` is “name” then `output` will be “exist”\n\n\n \nIf `input` is “class” then `output` will be “not exists”.\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "var readline = require('readline-sync');\nlet n =readline.question('Enter the property name:');\nlet dict={\"name\":\"Raju\", \"marks\":56}\nfor (i in dict){\nif (i==n){\n  console.log(\"exists\");\n  break\n}else{\n  console.log(\"not exist\");\n  break\n}\n}",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3826",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-6",
+                "slug": "js-objects__Exercises/Question-6",
+                "sequence_num": 705,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-6.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Write a program that calculates the sum of the values of an object.\n\n\n \nExample :\n\n\n\n`Input` :\n\n\n\nmy_dict = {\n\n\n    \n    'data1':100,\n    \n    'data2': -54,\n    \n    'data3': 247\n    \n    } \n \n\n`Output` :-\n\n\n\n293\n\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "var my_dict = {\n    'data1':100,\n    'data2': -54,\n    'data3': 247\n   }\nvar sum=0\n\nfor(i in my_dict){\n    sum+=my_dict[i]\n}\nconsole.log(\"Total:\",sum)",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3827",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-7",
+                "slug": "js-objects__Exercises/Question-7",
+                "sequence_num": 706,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-7.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Write a program that removes the first `key` and value of a nested object.\n\n\n\nExample :-\n\n\n\n`Input` :-\n\n\n\nmyDict= {\n    1: 'NAVGURUKUL',\n    2: 'IN',  \n    3:{    \n            'A' : 'WELCOME',\n            'B' : 'To',\n            'C' : 'DHARAMSALA'\n        }\n    }\n\n\n \n\n`Output` :-\n\n\n\nmyDict= {\n    1: 'NAVGURUKUL',\n    2: 'IN',  \n      3:\n      { 'B' : 'To',\n        'C' : 'DHARAMSALA'\n       }\n    }\n\n\n \n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "var myDict= {\n   1: 'NAVGURUKUL',\n   2: 'IN',\n   3:{  \n        'A' : 'WELCOME',\n        'B' : 'To',\n        'C' : 'DHARAMSALA'\n       }\n   }\nfor (i in myDict){\n   if ((typeof myDict[i]) === \"object\"){\n       delete myDict[i]['A']\n   }\n}\nconsole.log(myDict);",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3830",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-8",
+                "slug": "js-objects__Exercises/Question-8",
+                "sequence_num": 707,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-8.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Take two lists and make an object, 1st list elements be as `keys`, and 2nd lists elements as values.\n\n\n\nExample :-\n\n\n\n`Input` :-\n\n\n\nvar list1=[“one”,”two”,”three”,”four”,”five”]\n\n\n\nvar list2=[1,2,3,4,5,]\n\n\n\n`Output` :-\n\n\n\n{“one”:1,”two”:2,”three”:3,”four”:4,”five”:5}\n\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "let list1=['one','two','three','four','five']\nlet list2=[1,2,3,4,5]\nvar n={}\nfor (i in list2){\n   n[list1[i]]=list2[i]\n}\nconsole.log(n);",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3829",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-9",
+                "slug": "js-objects__Exercises/Question-9",
+                "sequence_num": 708,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-9.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Take 1 list and have some objects inside it as sample data given below, and create a new list with unique values and console the unique values list.\n\n\n\nExample :\n\n\n\n`Input` :\n\n\n\n[\n     {\"first\":\"1\"}, \n     {\"second\": \"2\"}, \n     {\"third\": \"1\"}, \n     {\"four\": \"5\"}, \n     {\"five\":\"5\"}, \n     {\"six\":\"9\"},\n     {\"seven\":\"7\"}\n]\n\n\n\n`Output` :-\n\n\n\n[2', '7', '9', '5', '1']\n\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "const list = [{ \"first\": \"1\", \"second\": \"2\", \"third\": \"1\", \"four\": \"5\", \"five\": \"5\", \"six\": \"9\", \"seven\": \"7\" }]\nlet uniques_list = [];\nfor (i of list) {\n  for (j in i) {\n      if (!uniques_list.includes(i[j])) { \n        uniques_list.push(i[j]);\n      }\n  }\n}\nconsole.log(uniques_list);",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3834",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-10",
+                "slug": "js-objects__Exercises/Question-10",
+                "sequence_num": 709,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-10.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Take 10 student `inputs` and marks and `save` them in an object.\n\n\n \n`Output` :-\n\n\n\n{\n    'sonu':85,\n    'Kartik':90,\n    'Deepak':96,\n    'Aman':76,\n    'Somesh':60,\n    'Umesh':85,\n    'Amarpal':70,\n    'Roshan':57,\n    'Riyaz':98,\n    'Shabid':56\n}\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "var readline = require('readline-sync');\nvar students={}\nfor (let step = 0; step <10; step++){\n   var name =readline.question(\"Enter your name:\");\n   var marks=readline.questionInt(\"Enter the marks\");\n   students[name]=marks;\n}\nconsole.log(students);",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3832",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-11",
+                "slug": "js-objects__Exercises/Question-11",
+                "sequence_num": 710,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-11.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "You need to count the number of occurrences of each unique character of a word \"MISSISSIPPI\" and store them in an object in `key`, value pairs.\n\n\n\n\nExample:-\n\n\n\n`Output` :-\n\n\n\n{M:1,I:4,S:4,P:2}\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "const list1=[]\nconst word=\"MISSISSIPPI\"\nlet output={}\nfor (var i of word) {\n      if(list1.includes(i)){\n       output[i]=output[i]+1\n    \n  }else{\n       list1.push(i);\n       output[i]=1;\n  }\n}\nconsole.log(output);",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3833",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-12",
+                "slug": "js-objects__Exercises/Question-12",
+                "sequence_num": 711,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-12.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Count the values of an object property; mostly they contain lists as values.\n\n\n\n`Input` :-\n\n\n\nvar dict =  {\n\n\n   \n   'Alex': ['subj1', 'subj2', 'subj3'], \n\n\n   \n   'David': ['subj1', 'subj2']\n\n\n   \n   }\n\n\n \n\n`Output` :-\n\n\n\ntotal count:5\n\n\n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution",
+                        "value": {
+                            "code": "var dict =  {\n   'Alex': ['subj1', 'subj2', 'subj3'],\n   'David': ['subj1', 'subj2']\n}\nvar count = 0\nfor(i in dict){\n   for (a in dict[i]){\n       count ++\n   }\n}\n \nconsole.log(count);\n ",
+                            "testCases": []
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "3831",
+                "parent_exercise_id": "3707",
+                "course_id": "150",
+                "name": "Question-13",
+                "slug": "js-objects__Exercises/Question-13",
+                "sequence_num": 712,
+                "review_type": "manual",
+                "submission_type": null,
+                "github_link": "https://github.com/navgurukul/newton/tree/master/js-objects/Exercises/Question-13.md",
+                "solution": null,
+                "content": [
+                    {
+                        "type": "markdown",
+                        "value": "Write a programme to find the 3 maximum values of an object and print them.\n\n\n\n`Input` :-\n\n\n\nvar my_dict = {\n    'a':50, \n    'b':58, \n    'c':56,\n    'd':40, \n    'e':100, \n    'f':20\n    }\n\n\n \n`Output` :-\n\n\n\n[58,56,100]\n\n\n \n\n"
+                    },
+                    {
+                        "type": "javascript",
+                        "value": {
+                            "code": "// please write code here",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "solution:",
+                        "value": {
+                            "code": "const d = { 'a': 50, 'b': 58, 'c': 56, 'd': 40, 'e': 100, 'f': 20 }\nvar l = []\nvar m_l = []\nvar k = []\nfor (i in d) {\n  l.push(d[i])\n  for (j of l) {\n      if (d[i] > j) {\n          m_l.push(d[i])\n       }\n      if (m_l.length === 3) {\n          break\n       }\n  }\n}\nconsole.log(m_l)",
+                            "testCases": []
+                        }
+                    },
+                    {
+                        "type": "markdown",
+                        "value": "**For the next course [clickHere](https://www.merakilearn.org/course/138/exercise/3529)**\n"
+                    }
+                ]
+            }
+        ]
+    }
+}
